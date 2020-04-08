@@ -1,0 +1,43 @@
+<!-- pages/product/detail.wxml -->
+<swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}">
+  <block wx:for="{{productData.imgList}}" wx:key="index">
+    <swiper-item>
+      <image class="swiper-image" src="{{item}}" mode="aspectFit" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="title">
+  <view class="product-price">
+    <text class="now">￥{{productId*20}}</text>
+    <text class="del">￥{{productId*15}}</text>
+  </view>
+  <view class="product-name">{{productData.name}}</view>
+  <view class="share">
+    <image class="share-icon" src="../../image/icon/share.png" />
+    分享</view>
+</view>
+<view class="tip">
+  <text class="tip-left">促销</text>
+  <text class="tip-right">满200减50</text>
+</view>
+<view class="content">
+  商品介绍
+  <view class="intro">
+    便宜实惠又好吃~
+  </view>
+</view>
+<view style="height:150rpx"></view>
+<view class="bottom-bar">
+  <view class="icon">
+    <image class="bottom-img" src="../../image/icon/service.jpg" />
+    <text class="icon-text">客服</text>
+  </view>
+  <view class="icon">
+    <image class="bottom-img" src="../../image/icon/like.jpg" />
+    <text class="icon-text">收藏</text>
+  </view>
+  <view class="button-box">
+    <view class="cart" bind:tap="handleAddCart">加入购物车</view>
+    <view class="buy" bind:tap="handleBuy">立即购买</view>
+  </view>
+</view>

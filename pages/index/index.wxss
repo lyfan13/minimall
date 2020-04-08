@@ -1,0 +1,115 @@
+/**index.wxss**/
+.swiper{
+  width:100%;
+  height: 300rpx;
+}
+.swiper-img{
+  width:750rpx;
+  height: 300rpx;
+}
+.nav-bar{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 10rpx;
+}
+.nav-item{
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-img{
+  width:100rpx;
+  height: 100rpx;
+}
+.nav-text{
+  color:#666666;
+  padding-top: 10rpx;
+  font-size: 28rpx;
+}
+/* 限时秒杀 */
+.sec-kill{
+  background-color: #fff;
+  padding: 24rpx;
+  margin-top: 20rpx;
+}
+.sec-scroll{
+  
+}
+.scroll-container{
+  display: flex;
+  align-items: center;
+}
+.scroll-item{
+  width: 220rpx;
+  margin: 0 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sec-price{
+  width: 180rpx;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color:#fc4353;
+  font-weight: 700;
+}
+.sec-price-del{
+  color:#999;
+  text-decoration: line-through;
+}
+.sec-item-img{
+  width: 200rpx;
+  height: 200rpx;
+}
+.sec-top{
+  display: flex;
+  align-items: center;
+}
+.sec-icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.sec-title{
+  font-size: 28rpx;
+}
+.ad-box{
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.ad-img{
+  width: 33.33%;
+}
+
+.rec-box{
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding: 24rpx;
+}
+.rec-content{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.rec-item{
+  width: 48%;
+}
+.rec-img{
+  width: 100%;
+}
+.rec-text{
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+}
+.rec-price{
+  color: #fc4353;
+  font-weight: 700;
+}

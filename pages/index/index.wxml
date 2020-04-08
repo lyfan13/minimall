@@ -1,0 +1,51 @@
+<!-- index.wxml -->
+<block wx:if="{{swiperList}}">
+  <swiper class="swiper" indicator-dots="true" indicator-color="rgba(0,0,0,.3)" autoplay="{{true}}" circular="false" bindchange="">
+    <swiper-item class="swiper-item" wx:for="{{swiperList}}" wx:key="id">
+      <image class="swiper-img" src="{{item.img}}" mode="widthFix" />
+      <text>555</text>
+    </swiper-item>
+  </swiper>
+</block>
+<view class="nav-bar">
+  <view wx:for="{{navList}}" class="nav-item" wx:key="id" bind:tap="handleNavClick" data-id="{{item.id}}">
+    <image class="nav-img" src="{{item.img}}" />
+    <text class="nav-text">{{item.name}}</text>
+  </view>
+</view>
+<view class="sec-kill">
+  <view class="sec-top">
+    <image class="sec-icon" src="../../image/icon/sec.jpg" />
+    <text class="sec-title">限时秒购</text>
+  </view>
+  <scroll-view scroll-y="{{false}}" scroll-x="{{true}}" class="sec-scroll">
+    <view class="scroll-container">
+      <view class="scroll-item" wx:for="{{secList}}" wx:key="id" bind:tap="handleSecClick" data-id="{{item.id}}">
+        <image class="sec-item-img" src="{{item.img}}" />
+        <view class="sec-price">
+          <text>￥{{item.id*20}}</text>
+          <text class="sec-price-del">￥{{item.id*15}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class="ad-box">
+  <image class="ad-img" mode="widthFix" src="../../image/ad-left.png" />
+  <image class="ad-img" mode="widthFix" src="../../image/ad-center.png" />
+  <image class="ad-img" mode="widthFix" src="../../image/ad-right.png" />
+</view>
+<view class="rec-box">
+  <view class="sec-top">
+    <text class="sec-title">今日推荐</text>
+  </view>
+  <view class="rec-content">
+    <view class="rec-item" wx:for="{{recList}}" wx:key="id" bind:tap="handleRecClick" data-id="{{item.id}}">
+      <image mode="widthFix" class="rec-img" src="{{item.img}}"/>
+      <view class="rec-text">
+        <text class="rec-name">{{item.name}}</text>
+        <text class="rec-price">￥{{item.id*20}}</text>
+      </view>
+    </view>
+  </view>
+</view>

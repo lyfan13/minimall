@@ -1,0 +1,132 @@
+/* pages/user/user.wxss */
+.info-box{
+  height: 300rpx;
+  color:white;
+  background-color: #18cc8a;
+  padding: 24rpx 24rpx 50rpx 24rpx;
+  position: relative;
+}
+.info-top{
+  display: flex;
+  align-items: center;
+}
+.user-text{
+  flex:1;
+}
+.user-avatar{
+  border-radius: 50%;
+  margin-right: 24rpx;
+  width: 140rpx;
+  height: 140rpx;
+}
+.user-name{
+  font-size: 34rpx;
+  margin-bottom: 10rpx;
+}
+.user-phone{
+  font-size: 30rpx;
+}
+.signday{
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 100rpx;
+  font-size: 28rpx;
+}
+.info-bottom{
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.info-item{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 28rpx;
+  position: relative;
+}
+.info-item:not(:last-child)::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20rpx;
+  bottom: 20rpx;
+  width: 1px;
+  background-color: #fff;
+}
+.item-count{
+  margin-bottom: 5rpx;
+}
+
+.order-box{
+  position: absolute;
+  background-color: #fff;
+  left: 24rpx;
+  right: 24rpx;
+  bottom: -128rpx;
+  color:#333;
+  border-radius: 16rpx;
+  padding: 20rpx;
+}
+.order-title{
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+.title-icon{
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 1px solid #999;
+  border-right: 1px solid #999;
+  transform: rotate(45deg);
+}
+.icon-wrap{
+  display: flex;
+  padding: 0 10rpx;
+}
+.icon-item{
+  flex:1;
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10rpx;
+}
+.icon-img{
+  width: 70rpx;
+  height: 70rpx;
+}
+/* 下面工具栏 */
+.tools-box{
+  margin-top: 160rpx;
+}
+.tool-item{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  padding:0 24rpx;
+  font-size: 30rpx;
+  margin-bottom: 1px;
+}
+.tool-text{
+  flex:1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10rpx;
+}
+.tool-tip{
+  color: #999;
+  font-size: 24rpx;
+}
+.tool-img{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 24rpx;
+}

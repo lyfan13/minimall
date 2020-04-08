@@ -1,0 +1,57 @@
+<!-- pages/cart/cart.wxml -->
+<view class="page-cart">
+  <view class="tip-top">
+    <text>开通会员可打9.5折优惠！还可以包邮哦！</text>
+    <view class="arrow"></view>
+  </view>
+  <view class="content">
+    <block wx:if="{{cartList&&cartList.length}}">
+      <scroll-view class="scroll" scroll-y="{{true}}">
+        <view class="product-item" wx:for="{{cartList}}" wx:key="id">
+          <view class="check-wrap" bind:tap="handleCheckItem" data-index="{{index}}">
+            <view class="{{item.checked?'checked-icon check-icon':'check-icon'}}">
+              <view class="inside-icon"></view>
+            </view>
+          </view>
+          <image class="product-img" src="{{item.img}}" />
+          <view class="product-intro">
+            <view class="intro-name">{{item.name}}</view>
+            <view class="intro-price">
+              <text class="price-now">￥{{item.id*20}}</text>
+              <text class="price-del">￥{{item.id*15}}</text>
+            </view>
+            <view class="stepper">
+              <view class="stepper-minus" bind:tap="handleMinus" data-index="{{index}}"></view>
+              <view class="stepper-count">{{item.count}}</view>
+              <view class="stepper-plus" bind:tap="handlePlus" data-index="{{index}}"></view>
+            </view>
+            <view class="del-item" data-index="{{index}}" bind:tap="handleDel">删除</view>
+          </view>
+        </view>
+      </scroll-view>
+    </block>
+    <!-- todo -->
+    <block wx:else>
+      <view class="empty-content">
+        <image class="empty-img" src="../../image/empty-cart.png" />
+        <text class="empty-text">你还没有添加商品到购物车呢，快去看看吧~</text>
+      </view>
+    </block>
+  </view>
+  <view class="bottom-bar" wx:if="{{cartList&&cartList.length}}">
+    <view class="bottom-checkbox">
+      <view bind:tap="handleCheckAll" class="{{checkAll?'check-icon checked-icon':'check-icon'}}">
+        <view class="inside-icon"></view>
+      </view>
+      <view class="check-text">
+        全选
+        <text wx:if="{{checkCount>0}}">({{checkCount}})</text>
+      </view>
+    </view>
+    <view class="bottom-calc">
+      合计:
+      <text class="calc-total">￥{{totalPrice}}</text>
+    </view>
+    <view class="bottom-btn">结算</view>
+  </view>
+</view>

@@ -1,0 +1,39 @@
+<!-- pages/user/user.wxml -->
+<view class="info-box">
+  <view class="info-top">
+    <image class="user-avatar" src="../../image/avatar.jpg" />
+    <view class="user-text">
+      <view class="user-name">派大星</view>
+      <view class="user-phone">134***85469</view>
+    </view>
+    <view class="signday">马上签到</view>
+  </view>
+  <view class="info-bottom">
+    <view class="info-item" wx:for="{{infoData}}">
+      <text class="item-count">{{item.count}}</text>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  <view class="order-box">
+    <view class="order-title">
+      <text class="title-left">全部订单</text>
+      <view class="title-icon"></view>
+    </view>
+    <view class="icon-wrap">
+      <view class="icon-item" wx:for="{{orderData}}" wx:key="name">
+        <image class="icon-img" src="{{item.img}}" />
+        <text class="icon-name">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="tools-box">
+  <view class="tool-item" wx:for="{{toolsData}}" wx:key="name">
+    <image class="tool-img" src="{{item.img}}" />
+    <view class="tool-text">
+      <text>{{item.name}}</text>
+      <text class="tool-tip" wx:if="{{item.tip}}">{{item.tip}}</text>
+    </view>
+    <view class="title-icon"></view>
+  </view>
+</view>

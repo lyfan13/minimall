@@ -1,0 +1,16 @@
+<!-- pages/category/category.wxml -->
+<view class="page-category">
+  <view class="content-left">
+    <view class="item-box" class="{{curId===item.id ?'item-box active-box' : 'item-box'}}" wx:for="{{categoryList}}" wx:key="id" bind:tap="handleCatItermClick" data-cid="{{item.id}}">
+      <view class="category-item">{{item.name}}</view>
+    </view>
+  </view>
+  <view class="content-right" wx:if="{{productList}}">
+    <view class="right-container">
+      <view wx:for="{{productList}}" wx:key="index" class="product-box" bind:tap="handleProductClick" data-pid="{{item.id}}">
+        <image src="{{item.img}}" mode="widthFix" class="product-img" />
+        <text class="product-text">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>
